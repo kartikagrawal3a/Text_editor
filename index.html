@@ -1,22 +1,29 @@
  <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<style type="text/css">
 		.div1{
-			width: 35%;
-			
+			max-width: 600px;
 			margin-top: 60px; 
 			background-color: #dcdcdc;
 			border: 3px solid yellow;
-			margin-left: 450px;
+			
 		}
 		input[type=button]{
-			height: 30px;
 			background-color: #000d1a;
 			color: white;
 			padding-left: 10px;
 			padding-right: 10px;
 			margin-left: 40px;
 			margin-bottom: 10px;
+		}
+		input[type=button]:hover{
+			background-color: #e0eeee;
+			color: #000d1a;
 		}
 		textarea{
 			margin-top: 30px;
@@ -25,23 +32,8 @@
 		p{
 			margin-left: 50px;
 		}
-		.img1{
-			position: absolute;
-			margin-top: 150px;
-			margin-left: 40px;
-
-		}
-		.img2{
-			position: absolute;
-			margin-top: 150px;
-			margin-left: 90px;
-
-		}
-		.img3{
-			position: absolute;
-			margin-top: 150px;
-			margin-left: 140px;
-
+		body{
+			background-color: #000d1a;
 		}
 	</style>
 	<script type="text/javascript">
@@ -75,14 +67,27 @@
 		}
 	</script>
 </head>
-<body bgcolor="#000d1a">
-	<div class="div1">
+<body >
+	<div class="div1 container">
+
 	<form name="f">
-		<textarea rows=20 cols =25 id="txt1"  name="txtar"></textarea>
+		<div class="row">
+			<div class="col-6 d-flex flex-column">
+		<textarea class="form-control w-75 rounded-10"  id="txt1"  name="txtar" rows="12"></textarea>
+		<nav class="mt-3">
+		<input type="button" name="btn" value="Add text" onclick="cls()" class="btn">
+		<input type="button" name="btn1" value="Clear" onclick="cls1()" class="btn">
+	</nav>
+		<div style="margin-left: 30px;" id="para" name="txt2"></div>
+	</div>
+	<div class="col-6 d-flex flex-column" style="margin-top: 120px;">
+		<div class="d-flex flex-row justify-content-around">
 		<img class="img1" src="images/bold.png" height="20px" width="20px" onclick="cls4()">
 		<img class="img2" src="images/italic.png" height="20px" width="20px" onclick="cls5()">
 		<img class="img3" src="images/underline.png" height="20px" width="20px" onclick="cls6()">
-		<b style="color: #000d1a; position: absolute; margin-left: 35px; margin-top: 217px; font-size: 20px;">Size </b><select id="slct1" onchange="cls2(this);" style="margin-left: 75px; position: absolute; margin-top: 220px; width: 60px;">
+	</div>
+	<div class="d-flex flex-row ml-3" style="margin-top: 50px;">
+		<label for="slct1" style="color: #000d1a; font-size: 20px; margin-right: 10px;">Size:</label><select class="form-control" id="slct1" onchange="cls2(this);" style="width:80px;">
 			<option value="10">10</option>
 			<option value="11">11</option>
 			<option value="12">12</option>
@@ -136,18 +141,20 @@
 			<option value="60">60</option>
 			<option value="70">70</option>
 		</select>
-		<b style="color: #000d1a; position: absolute; margin-left: 26px; margin-top: 357px; font-size: 20px;">Color</b>
-		<select onchange="cls3(this);" style="margin-left: 80px; position: absolute; margin-top: 360px; width: 70px;">
+	</div>
+	<div class="d-flex flex-row mb-2 mr-2 ml-0" style="margin-top: 100px;">
+		<label for="slct2" style="color: #000d1a; font-size: 20px; margin-right: 10px;">Color:</label>
+		<select class="form-control" onchange="cls3(this);" id="slct2" style="width: 100px;">
  			<option >Color</option>
  			<option value="Red">Red</option>
   			<option value="Green">Green</option>
   			<option value="Yellow">Yellow</option>
   			<option value="Blue">Blue</option>
   			<option value="Orange">Orange</option>
-		</select><br><br>
-		<input type="button" name="btn" value="Add text" onclick="cls()">
-		<input type="button" name="btn1" value="Clear" onclick="cls1()">
-		<div style="margin-left: 30px; margin-top: 10px; margin-right:10px;" id="para" name="txt2"></div>	</form>
-</div>
+		</select></div>
+		</div>
+
+			</form>
+</div></center>
 </body>
 </html>
