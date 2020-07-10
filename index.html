@@ -1,0 +1,153 @@
+ <html>
+<head>
+	<style type="text/css">
+		.div1{
+			width: 35%;
+			
+			margin-top: 60px; 
+			background-color: #dcdcdc;
+			border: 3px solid yellow;
+			margin-left: 450px;
+		}
+		input[type=button]{
+			height: 30px;
+			background-color: #000d1a;
+			color: white;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: 40px;
+			margin-bottom: 10px;
+		}
+		textarea{
+			margin-top: 30px;
+			margin-left: 30px;
+		}
+		p{
+			margin-left: 50px;
+		}
+		.img1{
+			position: absolute;
+			margin-top: 150px;
+			margin-left: 40px;
+
+		}
+		.img2{
+			position: absolute;
+			margin-top: 150px;
+			margin-left: 90px;
+
+		}
+		.img3{
+			position: absolute;
+			margin-top: 150px;
+			margin-left: 140px;
+
+		}
+	</style>
+	<script type="text/javascript">
+		function cls(){
+			x=document.getElementById("txt1").value;
+			document.getElementById("para").innerHTML=x;
+		}
+		function cls1(){
+			document.f.txtar.value="";
+			document.getElementById("para").innerHTML = "";
+		}
+		function cls2(x){
+			n=x.options[x.selectedIndex].text;
+			document.getElementById("para").style.fontSize = n;
+		}
+		function cls3(y){
+			m=y.options[y.selectedIndex].text;
+			document.getElementById("para").style.color=m;
+		}
+		function cls4(){
+			y=document.getElementById("para");
+			y.style.fontWeight="bold";
+		}
+		function cls5(){
+			z=document.getElementById("para");
+			z.style.fontStyle = "italic";
+		}
+		function cls6(){
+			a=document.getElementById("para");
+			a.style.textDecoration="underline";
+		}
+	</script>
+</head>
+<body bgcolor="#000d1a">
+	<div class="div1">
+	<form name="f">
+		<textarea rows=20 cols =25 id="txt1"  name="txtar"></textarea>
+		<img class="img1" src="images/bold.png" height="20px" width="20px" onclick="cls4()">
+		<img class="img2" src="images/italic.png" height="20px" width="20px" onclick="cls5()">
+		<img class="img3" src="images/underline.png" height="20px" width="20px" onclick="cls6()">
+		<b style="color: #000d1a; position: absolute; margin-left: 35px; margin-top: 217px; font-size: 20px;">Size </b><select id="slct1" onchange="cls2(this);" style="margin-left: 75px; position: absolute; margin-top: 220px; width: 60px;">
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+			<option value="32">32</option>
+			<option value="33">33</option>
+			<option value="34">34</option>
+			<option value="35">35</option>
+			<option value="36">36</option>
+			<option value="37">37</option>
+			<option value="38">38</option>
+			<option value="39">39</option>
+			<option value="40">40</option>
+			<option value="41">41</option>
+			<option value="42">42</option>
+			<option value="43">43</option>
+			<option value="44">44</option>
+			<option value="45">45</option>
+			<option value="46">46</option>
+			<option value="47">47</option>
+			<option value="48">48</option>
+			<option value="49">49</option>
+			<option value="50">50</option>
+			<option value="51">51</option>
+			<option value="52">52</option>
+			<option value="53">53</option>
+			<option value="54">54</option>
+			<option value="55">55</option>
+			<option value="56">56</option>
+			<option value="57">57</option>
+			<option value="58">58</option>
+			<option value="59">59</option>
+			<option value="60">60</option>
+			<option value="70">70</option>
+		</select>
+		<b style="color: #000d1a; position: absolute; margin-left: 26px; margin-top: 357px; font-size: 20px;">Color</b>
+		<select onchange="cls3(this);" style="margin-left: 80px; position: absolute; margin-top: 360px; width: 70px;">
+ 			<option >Color</option>
+ 			<option value="Red">Red</option>
+  			<option value="Green">Green</option>
+  			<option value="Yellow">Yellow</option>
+  			<option value="Blue">Blue</option>
+  			<option value="Orange">Orange</option>
+		</select><br><br>
+		<input type="button" name="btn" value="Add text" onclick="cls()">
+		<input type="button" name="btn1" value="Clear" onclick="cls1()">
+		<div style="margin-left: 30px; margin-top: 10px; margin-right:10px;" id="para" name="txt2"></div>	</form>
+</div>
+</body>
+</html>
